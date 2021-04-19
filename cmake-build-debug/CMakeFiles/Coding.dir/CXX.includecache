@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/Projects_Files/CLionProjects/Coding/coding/base/BaseDefine.h
+iostream
+-
+
+D:/Projects_Files/CLionProjects/Coding/coding/class/Class5.h
+../base/BaseDefine.h
+D:/Projects_Files/CLionProjects/Coding/coding/base/BaseDefine.h
+queue
+-
+
+D:/Projects_Files/CLionProjects/Coding/main.cpp
+coding/class/Class5.h
+D:/Projects_Files/CLionProjects/Coding/coding/class/Class5.h
+
