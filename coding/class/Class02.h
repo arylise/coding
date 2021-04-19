@@ -2,8 +2,8 @@
 // Created by Arylise on 2021/4/7.
 //
 
-#ifndef CODING_CLASS2_H
-#define CODING_CLASS2_H
+#ifndef CODING_CLASS02_H
+#define CODING_CLASS02_H
 
 #include "../base/BaseDefine.h"
 
@@ -144,4 +144,4 @@ namespace C2
         }
     };
 }
-#endif //CODING_CLASS2_H
+#endif //CODING_CLASS02_H

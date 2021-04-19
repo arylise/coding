@@ -3,4 +3,4 @@ project(Coding)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Coding main.cpp coding/base/BiTree.h coding/base/LinkedList.h coding/class/Class2.h coding/base/BaseDefine.h coding/base/Sort.h coding/class/Class18.h coding/myCoding/FixTree.h coding/myCoding/LinkedListAdd.h coding/class/Class3.h coding/class/Class1.h coding/class/Class4.h coding/class/Class5.h)
+add_executable(Coding main.cpp coding/base/BiTree.h coding/base/LinkedList.h coding/class/Class02.h coding/base/BaseDefine.h coding/base/Sort.h coding/class/Class18.h coding/myCoding/FixTree.h coding/myCoding/LinkedListAdd.h coding/class/Class03.h coding/class/Class01.h coding/class/Class04.h coding/class/Class05.h)

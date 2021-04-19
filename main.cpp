@@ -1,9 +1,12 @@
-#include "coding/class/Class5.h"
+#include "coding/class/Class05.h"
 
 using namespace std;
 
-int main() {
-    (new C5::Q1())->countOfRangeSum();
+int main()
+{
+//    (new C5::Q1())->countOfRangeSum();
+//    (new C5::Q1::Cmp())->countOfRangeSum();
+    C5::Cmp::test();
     return 0;
 }
 

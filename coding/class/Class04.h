@@ -2,8 +2,8 @@
 // Created by Arylise on 2021/4/12.
 //
 
-#ifndef CODING_CLASS4_H
-#define CODING_CLASS4_H
+#ifndef CODING_CLASS04_H
+#define CODING_CLASS04_H
 
 #include "../base/BaseDefine.h"
 #include <queue>
@@ -546,4 +546,4 @@ namespace C4
     }
 }
 
-#endif //CODING_CLASS4_H
+#endif //CODING_CLASS04_H

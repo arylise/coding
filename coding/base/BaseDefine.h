@@ -16,6 +16,5 @@
 #define __coutN(n) std::cout<<n<<std::endl
 #define __coutArray(a, n) for(int __i=0;__i<n;__i++) std::cout<<a[__i]<<" ";std::cout<<std::endl
 #define __coutArrayFrom(a, i, j) for(int __i=i;__i<=j;__i++) std::cout<<a[__i]<<" ";std::cout<<std::endl
-
-
+#define __range(min, n, max) (n>=min&&n<=max)
 #endif //CODING_BASEDEFINE_H
