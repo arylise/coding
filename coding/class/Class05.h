@@ -7,6 +7,7 @@
 
 #include "../base/BaseDefine.h"
 #include <queue>
+#include <algorithm>
 
 namespace C5
 {
@@ -167,6 +168,91 @@ namespace C5
          * 给定一个数组arr，和一个整数num。请把小于num的数放在数组的左边，等于num的数放在中间，大于num的数放在数组的右边。
          * 要求额外空间复杂度O(1)，时间复杂度O(N)
          */
+
+        int *arr{};
+
+        void _swap(int i, int j)
+        {
+            if (i == j)
+            {
+                return;
+            }
+            int t = arr[i];
+            arr[i] = arr[j];
+            arr[j] = t;
+        }
+
+        int *_partition(int left, int right)
+        {
+            if (left > right)
+            {
+                return new int[2]{-1, -1};
+            }
+            if (left == right)
+            {
+                return new int[2]{left, right};
+            }
+            int l = left - 1;
+            int r = right;
+            while (left < r)
+            {
+                if (arr[left] < arr[right])
+                {
+                    _swap(left++, ++l);
+                } else if (arr[left] > arr[right])
+                {
+                    _swap(left, --r);
+                } else
+                {
+                    left++;
+                }
+            }
+            _swap(left, right);
+            return new int[2]{l + 1, r};
+        }
+
+        void _process(int left, int right)
+        {
+            if (left >= right)
+            {
+                return;
+            }
+            _swap(left + (int) rand() * (right - left + 1), right);
+            int *leaf = _partition(left, right);
+            _process(left, leaf[0] - 1);
+            _process(leaf[1] + 1, right);
+            free(leaf);
+        }
+
+    public:
+        void quickSort()
+        {
+            int n = 11;
+            arr = new int[n]{1, 2, 5, 3, 4, 6, 7, 5, 8, 9, 5};
+            _process(0, n - 1);
+            __coutArray(arr, n);
+        }
+
+        int *test(int *a, int n)
+        {
+            if (a == nullptr || n < 2)
+            {
+                return a;
+            }
+            arr = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = a[i];
+            }
+            _process(0, n - 1);
+            return arr;
+        }
+
+        void end()
+        {
+            free(arr);
+            free(this);
+        }
     };
 
     class Q3
@@ -215,12 +301,44 @@ namespace C5
     };
     namespace Cmp
     {
-
-#define Question Q1
-        int cmpTimes = 1000;
-        int maxN = 1000;
-        int maxAi = 1000;
+        int cmpTimes = 100;
+        int maxN = 100;
+        int maxAi = 100;
         int maxU = 1000;
+
+        bool judQ1(int *a, int n)
+        {
+            int u = rand() % maxU;
+            int l = rand() % u;
+            auto fun = new Q1();
+            auto pCmp = new Q1::Cmp();
+            bool ans = fun->test(a, n, l, u) != pCmp->test(a, n, l, u);
+            free(fun);
+            free(pCmp);
+            if (ans)
+            {
+                __coutN(l << " " << u);
+            }
+            return ans;
+        }
+
+        bool judQ2(int *a, int n)
+        {
+            auto *fun = new Q2();
+            int *b = fun->test(a, n);
+            std::sort(a, a + n - 1);
+            for (int i = 0; i < n; i++)
+            {
+                if (a[i] != b[i])
+                {
+                    return false;
+                }
+            }
+            fun->end();
+            return true;
+        }
+
+#define jud judQ1
 
         void test()
         {
@@ -233,23 +351,16 @@ namespace C5
                 {
                     a[i] = rand() % maxAi;
                 }
-                int u = rand() % maxU;
-                int l = rand() % u;
-
-                auto *fun = new Question();
-                auto *pCmp = new Question::Cmp();
-#undef Question
-                if (fun->test(a, n, l, u) != pCmp->test(a, n, l, u))
+                if (jud(a, n))
                 {
+#undef jud
                     __coutN("mother fucker!" << std::endl << n);
                     __coutArray(a, n);
-                    __coutN(l << " " << u);
+                    free(a);
                     cmp = false;
                     break;
                 }
-                free(fun);
-                free(pCmp);
-                free(a);
+
             }
             if (cmp)
             {

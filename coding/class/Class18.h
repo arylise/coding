@@ -17,8 +17,9 @@
  * 规定机器人必须走 K 步，最终能来到P位置(P也是1~N中的一个)的方法有多少种
  * 给定四个参数 N、M、K、P，返回方法数。
  */
-
-/**
+class Q2
+{
+    /**
  * 给定一个整型数组arr，代表数值不同的纸牌排成一条线
  * 玩家A和玩家B依次拿走每张纸牌
  * 规定玩家A先拿，玩家B后拿
@@ -26,36 +27,43 @@
  * 玩家A和玩家B都绝顶聪明
  * 请返回最后获胜者的分数。
  */
-int *arr;
+    int *arr;
 
-int Aways(int, int);
+    int Aways(int, int);
 
-int Bways(int, int);
+    int Bways(int, int);
 
-int Bways(int left, int right) {
-    if (left == right) {
-        return 0;
+    int Bways(int left, int right)
+    {
+        if (left == right)
+        {
+            return 0;
+        }
+        int ans1 = Aways(left + 1, right);
+        int ans2 = Aways(left, right - 1);
+        return ans1 < ans2 ? ans1 : ans2;
     }
-    int ans1 = Aways(left + 1, right);
-    int ans2 = Aways(left, right - 1);
-    return ans1 < ans2 ? ans1 : ans2;
-}
 
-int Aways(int left, int right) {
-    if (left == right) {
-        return arr[left];
+    int Aways(int left, int right)
+    {
+        if (left == right)
+        {
+            return arr[left];
+        }
+        int ans1 = arr[left] + Bways(left + 1, right);
+        int ans2 = arr[right] + Bways(left, right - 1);
+        return ans1 > ans2 ? ans1 : ans2;
     }
-    int ans1 = arr[left] + Bways(left + 1, right);
-    int ans2 = arr[right] + Bways(left, right - 1);
-    return ans1 > ans2 ? ans1 : ans2;
-}
 
-void test() {
-    arr = new int[4]{50, 100, 20, 10};
-    for (int i = 0; i < 4; i++)std::cout << arr[i] << " ";
-    std::cout << Aways(0, 3) << std::endl;
-    std::cout << Bways(0, 3);
+    void test()
+    {
+        arr = new int[4]{50, 100, 20, 10};
+        for (int i = 0; i < 4; i++)std::cout << arr[i] << " ";
+        std::cout << Aways(0, 3) << std::endl;
+        std::cout << Bways(0, 3);
 
-}
+    }
+};
+
 
 #endif //CODING_CLASS18_H

@@ -92,22 +92,25 @@
 		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/base/Sort.h">
 			<Option target="Coding"/>
 		</Unit>
-		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class1.h">
+		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class01.h">
+			<Option target="Coding"/>
+		</Unit>
+		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class02.h">
+			<Option target="Coding"/>
+		</Unit>
+		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class03.h">
+			<Option target="Coding"/>
+		</Unit>
+		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class04.h">
+			<Option target="Coding"/>
+		</Unit>
+		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class05.h">
+			<Option target="Coding"/>
+		</Unit>
+		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class06.h">
 			<Option target="Coding"/>
 		</Unit>
 		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class18.h">
-			<Option target="Coding"/>
-		</Unit>
-		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class2.h">
-			<Option target="Coding"/>
-		</Unit>
-		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class3.h">
-			<Option target="Coding"/>
-		</Unit>
-		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class4.h">
-			<Option target="Coding"/>
-		</Unit>
-		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/class/Class5.h">
 			<Option target="Coding"/>
 		</Unit>
 		<Unit filename="D:/Projects_Files/CLionProjects/Coding/coding/myCoding/FixTree.h">
