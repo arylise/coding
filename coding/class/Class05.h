@@ -299,6 +299,7 @@ namespace C5
          * 时间复杂度O(N*logN)，额外空间复杂度O(logN)都是这么来的。
          */
     };
+
     namespace Cmp
     {
         int cmpTimes = 100;

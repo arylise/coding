@@ -229,6 +229,7 @@ public:
         free(this);
     }
 };
+
 namespace Cmp
 {
     int cmpTimes = 100;
