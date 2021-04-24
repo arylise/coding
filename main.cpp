@@ -1,11 +1,11 @@
-#include "coding/code_for_offer/Class01.h"
+#include "coding/exam/21_04_24_2.h"
 
-using namespace std;
-
+//998244353
 int main()
 {
-    (new C1::Q1())->cordCoverMaxPoint();
-//    (new HeapSort())->sort();
+    test2();
+
+
     return 0;
 }
 

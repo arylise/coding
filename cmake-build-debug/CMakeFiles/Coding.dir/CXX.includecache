@@ -6,17 +6,11 @@
 
 #IncludeRegexTransform: 
 
-D:/Projects_Files/CLionProjects/Coding/coding/base/BaseDefine.h
+D:/Projects_Files/CLionProjects/Coding/coding/exam/21_04_24_2.h
 iostream
 -
 
-D:/Projects_Files/CLionProjects/Coding/coding/class/Class06.h
-algorithm
--
-../base/BaseDefine.h
-D:/Projects_Files/CLionProjects/Coding/coding/base/BaseDefine.h
-
 D:/Projects_Files/CLionProjects/Coding/main.cpp
-coding/class/Class06.h
-D:/Projects_Files/CLionProjects/Coding/coding/class/Class06.h
+coding/exam/21_04_24_2.h
+D:/Projects_Files/CLionProjects/Coding/coding/exam/21_04_24_2.h
 
