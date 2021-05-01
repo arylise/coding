@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
-D:/Projects_Files/CLionProjects/Coding/main.cpp
-queue
--
+D:/Projects_Files/CLionProjects/Coding/coding/base/Base.h
+
+D:/Projects_Files/CLionProjects/Coding/coding/code_for_offer/Class01.h
+../base/Base.h
+D:/Projects_Files/CLionProjects/Coding/coding/base/Base.h
 iostream
 -
+algorithm
+-
+
+D:/Projects_Files/CLionProjects/Coding/main.cpp
+coding/code_for_offer/Class01.h
+D:/Projects_Files/CLionProjects/Coding/coding/code_for_offer/Class01.h
 

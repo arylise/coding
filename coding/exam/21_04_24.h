@@ -124,12 +124,12 @@ namespace sort
     void sortM()
     {
 #ifdef test
-        N = 5;
-        M = 5;
+        n = 5;
+        m = 5;
         T = 1000;
-        for (int i = 0; i < N; i++)
-            for (int j = 0; j < M; j++)
-                arr[i][j] = j + M * i;
+        for (int i = 0; i < n; i++)
+            for (int j = 0; j < m; j++)
+                arr[i][j] = j + m * i;
 #else
         std::cin >> N >> M >> T;
         for (int i = 0; i < N; i++)

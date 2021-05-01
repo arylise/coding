@@ -4,10 +4,10 @@
 
 #ifndef CODING_CLASS06_H
 #define CODING_CLASS06_H
-
+#include <iostream>
 #include <algorithm>
-#include "../base/BaseDefine.h"
 
+using namespace std;
 class Heap
 {
 private:
@@ -127,7 +127,10 @@ public:
 
     void showHeap()
     {
-        __coutArray(arr, heapSize);
+        for(int i=0;i<heapSize;i++){
+            cout<<arr[i]<<' ';
+        }
+        cout<<endl;
     }
 };
 
@@ -184,10 +187,11 @@ private:
 public:
     int *sort()
     {
-        __cinN(heapSize);
+        cin>>heapSize;
         arr = new int[heapSize];
-        __cinArray(arr, heapSize);
-        __coutArray(arr, heapSize);
+        for(int i=0;i<heapSize;i++){
+            cin>>arr[i];
+        }
         for (int i = (heapSize - 1) / 2; i >= 0; i--)
         {
             _heapIfy(i);
@@ -198,7 +202,10 @@ public:
             _heapIfy(0);
             _swap(0, --heapSize);
         }
-        __coutArray(arr, heapSize);
+        for (int i = 0; i < heapSize; i++)
+        {
+            cout << arr[i] << ' ';
+        }
         return arr;
     }
 
@@ -276,8 +283,11 @@ namespace Cmp
             if (jud(a, n))
             {
 #undef jud
-                __coutN("mother fucker!" << std::endl << n);
-                __coutArray(a, n);
+                cout << "mother fucker!" << std::endl << n;
+                for (int i = 0; i < n; i++)
+                {
+                    cout << a[i] << ' ';
+                }
                 free(a);
                 cmp = false;
                 break;
@@ -286,7 +296,7 @@ namespace Cmp
         }
         if (cmp)
         {
-            __coutN("ok");
+            cout<<"ok"<<endl;
         }
     }
 }
@@ -303,7 +313,7 @@ void test()
     heap->push(3);
     heap->push(4);
     while (!heap->isEmpty())
-        __coutN(heap->pull());
+        cout<<heap->pull()<<' ';
 }
 
 #endif //CODING_CLASS06_H
